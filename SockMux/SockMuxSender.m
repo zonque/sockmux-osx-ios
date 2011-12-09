@@ -21,6 +21,8 @@
 
 @implementation SockMuxSender 
 
+@synthesize delegate;
+
 #pragma mark -
 #pragma mark Stream Buffer handling
 

@@ -32,4 +32,6 @@
     withMessageID: (UInt32) messageID;
 - (void) sendMessageID: (UInt32) messageID;
 
+@property(nonatomic, assign) id delegate;
+
 @end

@@ -26,7 +26,6 @@
 @end
 
 @interface SockMuxReceiver : NSObject <NSStreamDelegate> {
-    //id <SockMuxReceiverDelegate> delegate;
 	NSInputStream *inputStream;
     NSMutableData *inputBuf;
     BOOL handshakeReceived;
