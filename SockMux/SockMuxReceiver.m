@@ -9,7 +9,10 @@
  License, or (at your option) any later version.
  ***/
 
-#ifndef TARGET_OS_MAC
+#import <TargetConditionals.h>
+
+#if (TARGET_OS_IPHONE)
+#import <UIKit/UIKit.h>
 #import <Endian.h>
 #endif
 
