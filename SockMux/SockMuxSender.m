@@ -101,7 +101,9 @@
         [outputBuf appendBytes: &msg
                         length: sizeof(msg)];
 
-        [outputBuf appendData: data];
+        if (data)
+            [outputBuf appendData: data];
+        
         [self feedOutputStream];
     }    
 }
