@@ -108,6 +108,12 @@
     }    
 }
 
+- (void) sendMessageID: (UInt32) messageID
+{
+    [self sendData: nil
+     withMessageID: messageID];
+}
+
 - (id) initWithStream: (NSOutputStream *) stream
 {
     self = [super init];

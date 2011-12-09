@@ -21,7 +21,6 @@
 
 @end
 
-
 @interface SockMuxSender : NSObject <NSStreamDelegate> {
     id<SockMuxSenderDelegate> delegate;
     NSOutputStream *outputStream;
@@ -31,5 +30,6 @@
 - (id) initWithStream: (NSOutputStream *) stream;
 - (void) sendData: (NSData *) data
     withMessageID: (UInt32) messageID;
+- (void) sendMessageID: (UInt32) messageID;
 
 @end
