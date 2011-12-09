@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		657D20E11492396D003BC229 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657D20E01492396D003BC229 /* Cocoa.framework */; };
+		657D20EB1492396D003BC229 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 657D20E91492396D003BC229 /* InfoPlist.strings */; };
+		657D20EF1492396D003BC229 /* SockMux.m in Sources */ = {isa = PBXBuildFile; fileRef = 657D20EE1492396D003BC229 /* SockMux.m */; };
+		657D20F71492396D003BC229 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657D20F61492396D003BC229 /* SenTestingKit.framework */; };
+		657D20F81492396D003BC229 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657D20E01492396D003BC229 /* Cocoa.framework */; };
+		657D20FB1492396D003BC229 /* SockMux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657D20DD1492396D003BC229 /* SockMux.framework */; };
+		657D21011492396D003BC229 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 657D20FF1492396D003BC229 /* InfoPlist.strings */; };
+		657D21041492396D003BC229 /* SockMuxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 657D21031492396D003BC229 /* SockMuxTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		657D20F91492396D003BC229 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 657D20D31492396D003BC229 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657D20DC1492396D003BC229;
+			remoteInfo = SockMux;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		657D20DD1492396D003BC229 /* SockMux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SockMux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		657D20E01492396D003BC229 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		657D20E31492396D003BC229 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		657D20E41492396D003BC229 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		657D20E51492396D003BC229 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		657D20E81492396D003BC229 /* SockMux-Info.plist */ = {isa = PBXFileReference; path = "SockMux-Info.plist"; sourceTree = "<group>"; };
+		657D20EA1492396D003BC229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		657D20EC1492396D003BC229 /* SockMux-Prefix.pch */ = {isa = PBXFileReference; path = "SockMux-Prefix.pch"; sourceTree = "<group>"; };
+		657D20ED1492396D003BC229 /* SockMux.h */ = {isa = PBXFileReference; path = SockMux.h; sourceTree = "<group>"; };
+		657D20EE1492396D003BC229 /* SockMux.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SockMux.m; sourceTree = "<group>"; };
+		657D20F51492396D003BC229 /* SockMuxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SockMuxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		657D20F61492396D003BC229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		657D20FE1492396D003BC229 /* SockMuxTests-Info.plist */ = {isa = PBXFileReference; path = "SockMuxTests-Info.plist"; sourceTree = "<group>"; };
+		657D21001492396D003BC229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		657D21021492396D003BC229 /* SockMuxTests.h */ = {isa = PBXFileReference; path = SockMuxTests.h; sourceTree = "<group>"; };
+		657D21031492396D003BC229 /* SockMuxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SockMuxTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		657D20D91492396D003BC229 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657D20E11492396D003BC229 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657D20F11492396D003BC229 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657D20F71492396D003BC229 /* SenTestingKit.framework in Frameworks */,
+				657D20F81492396D003BC229 /* Cocoa.framework in Frameworks */,
+				657D20FB1492396D003BC229 /* SockMux.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		657D20D11492396D003BC229 = {
+			isa = PBXGroup;
+			children = (
+				657D20E61492396D003BC229 /* SockMux */,
+				657D20FC1492396D003BC229 /* SockMuxTests */,
+				657D20DF1492396D003BC229 /* Frameworks */,
+				657D20DE1492396D003BC229 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		657D20DE1492396D003BC229 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				657D20DD1492396D003BC229 /* SockMux.framework */,
+				657D20F51492396D003BC229 /* SockMuxTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		657D20DF1492396D003BC229 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				657D20E01492396D003BC229 /* Cocoa.framework */,
+				657D20F61492396D003BC229 /* SenTestingKit.framework */,
+				657D20E21492396D003BC229 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		657D20E21492396D003BC229 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				657D20E31492396D003BC229 /* AppKit.framework */,
+				657D20E41492396D003BC229 /* CoreData.framework */,
+				657D20E51492396D003BC229 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		657D20E61492396D003BC229 /* SockMux */ = {
+			isa = PBXGroup;
+			children = (
+				657D20ED1492396D003BC229 /* SockMux.h */,
+				657D20EE1492396D003BC229 /* SockMux.m */,
+				657D20E71492396D003BC229 /* Supporting Files */,
+			);
+			path = SockMux;
+			sourceTree = "<group>";
+		};
+		657D20E71492396D003BC229 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				657D20E81492396D003BC229 /* SockMux-Info.plist */,
+				657D20E91492396D003BC229 /* InfoPlist.strings */,
+				657D20EC1492396D003BC229 /* SockMux-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		657D20FC1492396D003BC229 /* SockMuxTests */ = {
+			isa = PBXGroup;
+			children = (
+				657D21021492396D003BC229 /* SockMuxTests.h */,
+				657D21031492396D003BC229 /* SockMuxTests.m */,
+				657D20FD1492396D003BC229 /* Supporting Files */,
+			);
+			path = SockMuxTests;
+			sourceTree = "<group>";
+		};
+		657D20FD1492396D003BC229 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				657D20FE1492396D003BC229 /* SockMuxTests-Info.plist */,
+				657D20FF1492396D003BC229 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		657D20DA1492396D003BC229 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		657D20DC1492396D003BC229 /* SockMux */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 657D21071492396D003BC229 /* Build configuration list for PBXNativeTarget "SockMux" */;
+			buildPhases = (
+				657D20D81492396D003BC229 /* Sources */,
+				657D20D91492396D003BC229 /* Frameworks */,
+				657D20DA1492396D003BC229 /* Headers */,
+				657D20DB1492396D003BC229 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SockMux;
+			productName = SockMux;
+			productReference = 657D20DD1492396D003BC229 /* SockMux.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		657D20F41492396D003BC229 /* SockMuxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 657D210A1492396D003BC229 /* Build configuration list for PBXNativeTarget "SockMuxTests" */;
+			buildPhases = (
+				657D20F01492396D003BC229 /* Sources */,
+				657D20F11492396D003BC229 /* Frameworks */,
+				657D20F21492396D003BC229 /* Resources */,
+				657D20F31492396D003BC229 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				657D20FA1492396D003BC229 /* PBXTargetDependency */,
+			);
+			name = SockMuxTests;
+			productName = SockMuxTests;
+			productReference = 657D20F51492396D003BC229 /* SockMuxTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		657D20D31492396D003BC229 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = caiaq;
+			};
+			buildConfigurationList = 657D20D61492396D003BC229 /* Build configuration list for PBXProject "SockMux" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 657D20D11492396D003BC229;
+			productRefGroup = 657D20DE1492396D003BC229 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				657D20DC1492396D003BC229 /* SockMux */,
+				657D20F41492396D003BC229 /* SockMuxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		657D20DB1492396D003BC229 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657D20EB1492396D003BC229 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657D20F21492396D003BC229 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657D21011492396D003BC229 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		657D20F31492396D003BC229 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		657D20D81492396D003BC229 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657D20EF1492396D003BC229 /* SockMux.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657D20F01492396D003BC229 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657D21041492396D003BC229 /* SockMuxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		657D20FA1492396D003BC229 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657D20DC1492396D003BC229 /* SockMux */;
+			targetProxy = 657D20F91492396D003BC229 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		657D20E91492396D003BC229 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				657D20EA1492396D003BC229 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		657D20FF1492396D003BC229 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				657D21001492396D003BC229 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		657D21051492396D003BC229 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		657D21061492396D003BC229 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		657D21081492396D003BC229 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SockMux/SockMux-Prefix.pch";
+				INFOPLIST_FILE = "SockMux/SockMux-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		657D21091492396D003BC229 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SockMux/SockMux-Prefix.pch";
+				INFOPLIST_FILE = "SockMux/SockMux-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		657D210B1492396D003BC229 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SockMux/SockMux-Prefix.pch";
+				INFOPLIST_FILE = "SockMuxTests/SockMuxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		657D210C1492396D003BC229 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SockMux/SockMux-Prefix.pch";
+				INFOPLIST_FILE = "SockMuxTests/SockMuxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		657D20D61492396D003BC229 /* Build configuration list for PBXProject "SockMux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657D21051492396D003BC229 /* Debug */,
+				657D21061492396D003BC229 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		657D21071492396D003BC229 /* Build configuration list for PBXNativeTarget "SockMux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657D21081492396D003BC229 /* Debug */,
+				657D21091492396D003BC229 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		657D210A1492396D003BC229 /* Build configuration list for PBXNativeTarget "SockMuxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				657D210B1492396D003BC229 /* Debug */,
+				657D210C1492396D003BC229 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 657D20D31492396D003BC229 /* Project object */;
+}
