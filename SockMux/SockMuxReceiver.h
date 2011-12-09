@@ -32,7 +32,7 @@
     BOOL handshakeReceived;
 }
 
-- (id) initWithInputStream: (NSInputStream *) stream;
+- (id) initWithStream: (NSInputStream *) stream;
 @property(nonatomic, assign) id delegate;
 
 @end

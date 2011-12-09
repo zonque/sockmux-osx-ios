@@ -137,7 +137,7 @@
 	}
 }
 
-- (id) initWithInputStream: (NSInputStream *) stream
+- (id) initWithStream: (NSInputStream *) stream
 {
     self = [super init];
     if (self) {
