@@ -18,7 +18,7 @@
 - (void) messageReceivedByReceiver: (SockMuxReceiver *) receiver
                          messageID: (UInt32) messageID
                               data: (const Byte *) data
-                              size: (IOByteCount) size;
+                              size: (UInt32) size;
 
 @optional
 - (void) streamClosedForReceiver: (SockMuxReceiver *) receiver;

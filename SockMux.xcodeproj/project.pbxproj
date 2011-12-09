@@ -10,9 +10,16 @@
 		657D20E11492396D003BC229 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657D20E01492396D003BC229 /* Cocoa.framework */; };
 		657D20EB1492396D003BC229 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 657D20E91492396D003BC229 /* InfoPlist.strings */; };
 		657D20EF1492396D003BC229 /* SockMuxReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 657D20EE1492396D003BC229 /* SockMuxReceiver.m */; };
-		657D211114923A82003BC229 /* protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 657D211014923A82003BC229 /* protocol.h */; };
-		65F5824614924654009F6EAD /* SockMuxSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F5824414924654009F6EAD /* SockMuxSender.h */; };
+		657D211114923A82003BC229 /* protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 657D211014923A82003BC229 /* protocol.h */; settings = {ATTRIBUTES = (); }; };
+		65F5824614924654009F6EAD /* SockMuxSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F5824414924654009F6EAD /* SockMuxSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65F5824714924654009F6EAD /* SockMuxSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F5824514924654009F6EAD /* SockMuxSender.m */; };
+		65F582A71492567A009F6EAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F5826614924CC7009F6EAD /* Foundation.framework */; };
+		65F582B1149256B5009F6EAD /* SockMuxReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 657D20EE1492396D003BC229 /* SockMuxReceiver.m */; };
+		65F582B2149256B8009F6EAD /* SockMuxSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F5824514924654009F6EAD /* SockMuxSender.m */; };
+		65F582B814925A45009F6EAD /* protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 657D211014923A82003BC229 /* protocol.h */; settings = {ATTRIBUTES = (); }; };
+		65F582B914925A82009F6EAD /* SockMuxReceiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 657D20ED1492396D003BC229 /* SockMuxReceiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65F582BA14925A92009F6EAD /* SockMuxReceiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 657D20ED1492396D003BC229 /* SockMuxReceiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65F582BB14925A95009F6EAD /* SockMuxSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F5824414924654009F6EAD /* SockMuxSender.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +38,7 @@
 		65F5824514924654009F6EAD /* SockMuxSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SockMuxSender.m; sourceTree = "<group>"; };
 		65F5825514924C96009F6EAD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		65F5826614924CC7009F6EAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		65F582A614925679009F6EAD /* libSockMux.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSockMux.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				657D20E11492396D003BC229 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65F582A314925679009F6EAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65F582A71492567A009F6EAD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				657D20DD1492396D003BC229 /* SockMux.framework */,
+				65F582A614925679009F6EAD /* libSockMux.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,17 +130,28 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				657D211114923A82003BC229 /* protocol.h in Headers */,
+				65F582B914925A82009F6EAD /* SockMuxReceiver.h in Headers */,
 				65F5824614924654009F6EAD /* SockMuxSender.h in Headers */,
+				657D211114923A82003BC229 /* protocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65F582A414925679009F6EAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65F582BA14925A92009F6EAD /* SockMuxReceiver.h in Headers */,
+				65F582BB14925A95009F6EAD /* SockMuxSender.h in Headers */,
+				65F582B814925A45009F6EAD /* protocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		657D20DC1492396D003BC229 /* SockMux */ = {
+		657D20DC1492396D003BC229 /* SockMuxOSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 657D21071492396D003BC229 /* Build configuration list for PBXNativeTarget "SockMux" */;
+			buildConfigurationList = 657D21071492396D003BC229 /* Build configuration list for PBXNativeTarget "SockMuxOSX" */;
 			buildPhases = (
 				657D20D81492396D003BC229 /* Sources */,
 				657D20D91492396D003BC229 /* Frameworks */,
@@ -134,10 +162,27 @@
 			);
 			dependencies = (
 			);
-			name = SockMux;
+			name = SockMuxOSX;
 			productName = SockMux;
 			productReference = 657D20DD1492396D003BC229 /* SockMux.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		65F582A514925679009F6EAD /* SockMuxIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65F582AE1492567A009F6EAD /* Build configuration list for PBXNativeTarget "SockMuxIOS" */;
+			buildPhases = (
+				65F582A214925679009F6EAD /* Sources */,
+				65F582A314925679009F6EAD /* Frameworks */,
+				65F582A414925679009F6EAD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SockMuxIOS;
+			productName = SockMuxIOS;
+			productReference = 65F582A614925679009F6EAD /* libSockMux.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -160,7 +205,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				657D20DC1492396D003BC229 /* SockMux */,
+				657D20DC1492396D003BC229 /* SockMuxOSX */,
+				65F582A514925679009F6EAD /* SockMuxIOS */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +232,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65F582A214925679009F6EAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65F582B1149256B5009F6EAD /* SockMuxReceiver.m in Sources */,
+				65F582B2149256B8009F6EAD /* SockMuxSender.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -205,7 +260,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -232,7 +287,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -259,9 +314,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SockMux/SockMux-Prefix.pch";
 				INFOPLIST_FILE = "SockMux/SockMux-Info.plist";
-				OTHER_CODE_SIGN_FLAGS = "armv7 armv6 i386 x86_64";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx SUPPORTED_PLATFORMS = iphonesimulator iphoneos\n";
+				OTHER_CODE_SIGN_FLAGS = "i386 x86_64";
+				PRODUCT_NAME = SockMux;
+				SUPPORTED_PLATFORMS = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -278,10 +333,41 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SockMux/SockMux-Prefix.pch";
 				INFOPLIST_FILE = "SockMux/SockMux-Info.plist";
-				OTHER_CODE_SIGN_FLAGS = "armv7 armv6 i386 x86_64";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx SUPPORTED_PLATFORMS = iphonesimulator iphoneos\n";
+				OTHER_CODE_SIGN_FLAGS = "i386 x86_64";
+				PRODUCT_NAME = SockMux;
+				SUPPORTED_PLATFORMS = macosx;
 				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		65F582AF1492567A009F6EAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/SockMuxIOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SockMux/SockMuxIOS-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SockMux;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		65F582B01492567A009F6EAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/SockMuxIOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SockMux/SockMuxIOS-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SockMux;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -297,11 +383,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		657D21071492396D003BC229 /* Build configuration list for PBXNativeTarget "SockMux" */ = {
+		657D21071492396D003BC229 /* Build configuration list for PBXNativeTarget "SockMuxOSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				657D21081492396D003BC229 /* Debug */,
 				657D21091492396D003BC229 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65F582AE1492567A009F6EAD /* Build configuration list for PBXNativeTarget "SockMuxIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65F582AF1492567A009F6EAD /* Debug */,
+				65F582B01492567A009F6EAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

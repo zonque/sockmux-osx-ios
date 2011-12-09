@@ -9,6 +9,10 @@
  License, or (at your option) any later version.
  ***/
 
+#ifndef TARGET_OS_MAC
+#import <Endian.h>
+#endif
+
 #import "SockMuxSender.h"
 #import "protocol.h"
 
