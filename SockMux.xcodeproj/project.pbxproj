@@ -26,7 +26,6 @@
 		657D20EC1492396D003BC229 /* SockMux-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SockMux-Prefix.pch"; sourceTree = "<group>"; };
 		657D20ED1492396D003BC229 /* SockMuxReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SockMuxReceiver.h; sourceTree = "<group>"; };
 		657D20EE1492396D003BC229 /* SockMuxReceiver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SockMuxReceiver.m; sourceTree = "<group>"; };
-		657D20F61492396D003BC229 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		657D211014923A82003BC229 /* protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = protocol.h; sourceTree = "<group>"; };
 		65F5824414924654009F6EAD /* SockMuxSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SockMuxSender.h; sourceTree = "<group>"; };
 		65F5824514924654009F6EAD /* SockMuxSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SockMuxSender.m; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				657D20E01492396D003BC229 /* Cocoa.framework */,
-				657D20F61492396D003BC229 /* SenTestingKit.framework */,
 				65F5825514924C96009F6EAD /* CoreFoundation.framework */,
 				65F5826614924CC7009F6EAD /* Foundation.framework */,
 				657D20E21492396D003BC229 /* Other Frameworks */,
