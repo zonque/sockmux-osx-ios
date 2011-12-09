@@ -23,7 +23,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2011 caiaq. All rights reserved.</string>
+	<string>Copyright © 2011 Daniel Mack. Licensed under the LGPL v2.</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>
