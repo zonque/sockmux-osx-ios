@@ -88,22 +88,26 @@
 	}
 }
 
-
 - (void) sendData: (NSData *) data
     withMessageID: (UInt32) messageID
 {
     if (outputStream.delegate == self) {
         SockMuxMessage msg;
-        
+
         msg.magic = EndianU32_NtoB(SOCKMUX_PROTOCOL_MAGIC);
         msg.messageID = EndianU32_NtoB(messageID);
-        msg.length = EndianU32_NtoB([data length]);
+
+        if (data)
+            msg.length = EndianU32_NtoB([data length]);
+        else
+            msg.length = 0;
+
         [outputBuf appendBytes: &msg
                         length: sizeof(msg)];
 
         if (data)
             [outputBuf appendData: data];
-        
+
         [self feedOutputStream];
     }    
 }
@@ -123,8 +127,8 @@
         [outputStream setDelegate: self];
     }
 
+    // send handshake
     SockMuxHandshake hs;
-    
     hs.magic = EndianU32_NtoB(SOCKMUX_PROTOCOL_MAGIC);
     hs.handshakeMagic = EndianU32_NtoB(SOCKMUX_PROTOCOL_HANDSHAKE_MAGIC);
     hs.protocolVersion = EndianU32_NtoB(PROTOCOL_VERSION);
