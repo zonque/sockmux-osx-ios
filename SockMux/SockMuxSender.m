@@ -96,7 +96,7 @@
     if (outputStream.delegate == self) {
         SockMuxMessage msg;
 
-        msg.magic = EndianU32_NtoB(SOCKMUX_PROTOCOL_MAGIC);
+        msg.magic = EndianU32_NtoB(magic);
         msg.messageID = EndianU32_NtoB(messageID);
 
         if (data)
@@ -121,9 +121,11 @@
 }
 
 - (id) initWithStream: (NSOutputStream *) stream
+                magic: (UInt32) _magic
 {
     self = [super init];
     if (self) {
+        magic = _magic;
         outputBuf = [[NSMutableData dataWithLength: 0] retain];
         outputStream = stream;
         [outputStream setDelegate: self];
@@ -131,8 +133,7 @@
 
     // send handshake
     SockMuxHandshake hs;
-    hs.magic = EndianU32_NtoB(SOCKMUX_PROTOCOL_MAGIC);
-    hs.handshakeMagic = EndianU32_NtoB(SOCKMUX_PROTOCOL_HANDSHAKE_MAGIC);
+    hs.magic = EndianU32_NtoB(magic);
     hs.protocolVersion = EndianU32_NtoB(PROTOCOL_VERSION);
     [outputBuf appendBytes: &hs
                     length: sizeof(hs)];

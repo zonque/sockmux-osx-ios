@@ -25,9 +25,12 @@
     id<SockMuxSenderDelegate> delegate;
     NSOutputStream *outputStream;
 	NSMutableData *outputBuf;
+    UInt32 magic;
 }
 
-- (id) initWithStream: (NSOutputStream *) stream;
+- (id) initWithStream: (NSOutputStream *) stream
+                magic: (UInt32) magic;
+
 - (void) sendData: (NSData *) data
     withMessageID: (UInt32) messageID;
 - (void) sendMessageID: (UInt32) messageID;

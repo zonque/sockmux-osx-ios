@@ -29,9 +29,12 @@
 	NSInputStream *inputStream;
     NSMutableData *inputBuf;
     BOOL handshakeReceived;
+    UInt32 magic;
 }
 
-- (id) initWithStream: (NSInputStream *) stream;
+- (id) initWithStream: (NSInputStream *) stream
+                magic: (UInt32) magic;
+
 @property(nonatomic, assign) id delegate;
 
 @end

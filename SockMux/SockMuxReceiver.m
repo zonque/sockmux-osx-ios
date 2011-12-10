@@ -63,8 +63,7 @@
                 return;
             
             const SockMuxHandshake *hs = [inputBuf bytes];
-            if (EndianU32_BtoN(hs->magic) != SOCKMUX_PROTOCOL_MAGIC ||
-                EndianU32_BtoN(hs->handshakeMagic) != SOCKMUX_PROTOCOL_HANDSHAKE_MAGIC) {
+            if (EndianU32_BtoN(hs->magic) != magic) {
                 [self delegateProtocolError];
                 return;
             }
@@ -78,11 +77,11 @@
 			return;
 		
 		const SockMuxMessage *msg = [inputBuf bytes];
-        UInt32 magic = EndianU32_BtoN(msg->magic);
+        UInt32 msgmagic = EndianU32_BtoN(msg->magic);
 		UInt32 msglen = EndianU32_BtoN(msg->length);
 		UInt32 messageID = EndianU32_BtoN(msg->messageID);
         
-        if (magic != SOCKMUX_PROTOCOL_MAGIC) {
+        if (magic != msgmagic) {
             [self delegateProtocolError];
             return;
         }
@@ -138,9 +137,11 @@
 }
 
 - (id) initWithStream: (NSInputStream *) stream
+                magic: (UInt32) _magic
 {
     self = [super init];
     if (self) {
+        magic = _magic;
         inputBuf = [[NSMutableData dataWithLength: 0] retain];
         inputStream = stream;
         [inputStream setDelegate: self];

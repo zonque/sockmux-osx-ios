@@ -11,12 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define SOCKMUX_PROTOCOL_MAGIC              0x7ab938ab
-#define SOCKMUX_PROTOCOL_HANDSHAKE_MAGIC    0x3f9ab044
-
 struct _SockMuxHandshake {
     UInt32 magic;
-    UInt32 handshakeMagic;
     UInt32 protocolVersion;
 } __attribute__((packed));
 
