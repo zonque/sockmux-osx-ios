@@ -29,6 +29,7 @@
 	NSInputStream *inputStream;
     NSMutableData *inputBuf;
     BOOL handshakeReceived;
+    UInt32 protocolVersion;
     UInt32 magic;
 }
 

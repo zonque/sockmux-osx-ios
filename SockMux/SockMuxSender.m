@@ -82,7 +82,7 @@
 				[self feedOutputStream];
             
 			break;
-
+            
 		case NSStreamEventEndEncountered:
 		case NSStreamEventErrorOccurred:
             [self delegateDisconnect];
@@ -95,21 +95,21 @@
 {
     if (outputStream.delegate == self) {
         SockMuxMessage msg;
-
+        
         msg.magic = EndianU32_NtoB(magic);
         msg.messageID = EndianU32_NtoB(messageID);
-
+        
         if (data)
             msg.length = EndianU32_NtoB([data length]);
         else
             msg.length = 0;
-
+        
         [outputBuf appendBytes: &msg
                         length: sizeof(msg)];
-
+        
         if (data)
             [outputBuf appendData: data];
-
+        
         [self feedOutputStream];
     }    
 }
@@ -130,7 +130,7 @@
         outputStream = stream;
         [outputStream setDelegate: self];
     }
-
+    
     // send handshake
     SockMuxHandshake hs;
     hs.magic = EndianU32_NtoB(magic);
@@ -138,7 +138,7 @@
     [outputBuf appendBytes: &hs
                     length: sizeof(hs)];
     [self feedOutputStream];
-
+    
     return self;
 }
 

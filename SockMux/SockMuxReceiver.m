@@ -71,34 +71,34 @@
             [self removeFromBeginningOfBuf: &inputBuf
                                     length: sizeof(*hs)];
             handshakeReceived = YES;
+            protocolVersion = EndianU32_BtoN(hs->protocolVersion);
         }
         
 		if (availableLength < sizeof(SockMuxMessage))
 			return;
 		
 		const SockMuxMessage *msg = [inputBuf bytes];
-        UInt32 msgmagic = EndianU32_BtoN(msg->magic);
 		UInt32 msglen = EndianU32_BtoN(msg->length);
 		UInt32 messageID = EndianU32_BtoN(msg->messageID);
         
-        if (magic != msgmagic) {
+        if (EndianU32_BtoN(msg->magic) != magic) {
             [self delegateProtocolError];
             return;
         }
 		
-		if (availableLength < msglen) {
+		if (availableLength < msglen + sizeof(*msg)) {
             // NSLog(@"waiting for %d bytes, got only %d\n", msglen, availableLength);
 			return;
 		}
-
-        if (delegate && [delegate respondsToSelector: @selector(messageReceivedByReceiver::::)])
+        
+        if (delegate && [delegate respondsToSelector: @selector(messageReceivedByReceiver:messageID:data:size:)])
             [delegate messageReceivedByReceiver: self
                                       messageID: messageID
                                            data: msg->data
                                            size: msglen];
 		
 		[self removeFromBeginningOfBuf: &inputBuf
-                                length: msglen];
+                                length: msglen + sizeof(*msg)];
 	}
 }
 
@@ -127,6 +127,13 @@
                 [self delegateDisconnect];
                 break;
             }
+            
+            if (len) {
+                [inputBuf appendBytes: buf
+                               length: len];
+                [self dispatchInputBuf];
+            }
+            
 			break;
             
 		case NSStreamEventEndEncountered:
